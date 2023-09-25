@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  height: calc( 100vh - 100px  ); 
+  background: linear-gradient(45deg, #42275a, #734b6d);
+}
+
+form {
+  width: 650px;
+  padding: 20px;
+  background-color: rgba(214, 209, 209, 0.9);
+  border-radius: 5px;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.name-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.name-group input {
+  width: 100%; 
+}
+
+.form-container {
+  width: 100%;
+  max-width: 550px; 
+  margin: auto;
+  margin-right: 525px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + label {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  margin-right: 15px; 
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgb(164, 150, 150);
+  border-radius: 50%;
+  background-color: white;
+}
+
+input[type="radio"]:checked + label::before {
+  background-color: #007bff;
+  box-shadow: inset 0 0 0 2px white;
+}
+
+input,
+select {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 20px;
+  font-size: 16px;
+  transition: border 0.3s;
+  background-color: #f3efef;
+}
+
+input:focus,
+select:focus {
+  border: 1px solid #007bff; 
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px; 
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px; 
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.gender-group,
+.buttons-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 10px; 
+  justify-content: flex-start; 
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ddd;
+}
+
+
+@media (max-width: 768px) {
+  form {
+    width: 90%; 
+    margin: 20px auto; 
+  }
+
+  .name-group {
+    flex-direction: column; 
+  }
+
+  .name-group input {
+    width: 100%; 
+    margin-bottom: 10px; 
+  }
+
+  .gender-group,
+  .buttons-group {
+    justify-content: space-between; 
+  }
+}

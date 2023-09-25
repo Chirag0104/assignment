@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="form-container">
+      <form id="surveyForm">
+        <h2>Customer Survey Form</h2>
+        <div class="name-group">
+          <div>First Name: <input type="text" id="firstName" required /></div>
+          <div>Last Name: <input type="text" id="lastName" required /></div>
+        </div>
+        Date of Birth: <input type="date" id="dob" required /><br />
+        Country:
+        <select id="country" required>
+          <option value="">Select Country</option>
+          <option value="India">India</option>
+          <option value="USA">USA</option>
+          <option value="Canada">Canada</option>
+          <option value="UK">UK</option>
+          </select
+        ><br />
+        <label>Gender:</label><br /><br />
+        <div class="gender-group">
+          <input type="radio" id="male" name="gender" value="Male" />
+          <label for="male">Male</label>
+
+          <input type="radio" id="female" name="gender" value="Female" />
+          <label for="female">Female</label>
+
+          <input type="radio" id="other" name="gender" value="Other" />
+          <label for="other">Other</label>
+        </div>
+        <br />
+        Profession: <input type="text" id="profession" required /><br />
+        Email: <input type="email" id="email" required /><br />
+        Mobile Number:
+        <input
+          type="tel"
+          id="mobile"
+          required
+          pattern="[0-9]{10}"
+          title="Please enter a valid 10 digit number."
+        /><br />
+        <div class="buttons-group">
+          <!-- Grouping buttons for alignment -->
+          <button type="button" onclick="submitForm()">Submit</button>
+          <button type="button" onclick="resetForm()">Reset</button>
+        </div>
+      </form>
+
+      <div class="popup" id="popup">
+        <div id="popupContent"></div>
+        <button onclick="closePopup()">Close</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
